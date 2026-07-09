@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-row gap-4">
             <Link
               href="/packages"
-              className="rounded-full bg-white px-7 py-4 text-center text-sm font-bold text-[#12345a] transition hover:bg-blue-100 sm:px-9 sm:text-base"
+              className="rounded-full border border-white px-7 py-4 text-center text-sm font-bold text-white transition hover:bg-white/10 sm:px-9 sm:text-base"
             >
               View Packages
             </Link>

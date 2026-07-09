@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-3">
         <div>
           <h3 className="font-serif text-2xl">
-            To Nations <em className="text-[#2f80b9]">Tours</em>
+            To Nations Tours
           </h3>
           <p className="mt-6 max-w-sm leading-7 text-white/60">
             Authentic journeys and meaningful memories across South Africa,
