@@ -1,0 +1,57 @@
+export const journeys = [
+  {
+    slug: "essence-of-south-africa",
+    title: "Essence of South Africa",
+    destination: "South Africa",
+    duration: "7 Days",
+    price: "From $950",
+    location: "Cape Town · Johannesburg · Safari",
+    image: "/images/essence-south-africa.jpg",
+    description:
+      "A curated South African journey combining city life, culture, wildlife, and scenic landscapes.",
+  },
+  {
+    slug: "south-african-classic",
+    title: "South African Classic",
+    destination: "South Africa",
+    duration: "10 Days",
+    price: "From $1,250",
+    location: "Cape Town · Garden Route · Safari",
+    image: "/images/south-african-classic.jpg",
+    description:
+      "Explore South Africa’s classic highlights, from Cape Town to the Garden Route and wildlife experiences.",
+  },
+  {
+    slug: "garden-route",
+    title: "Garden Route",
+    destination: "South Africa",
+    duration: "6 Days",
+    price: "From $850",
+    location: "Mossel Bay · Knysna · Tsitsikamma",
+    image: "/images/garden-route.jpg",
+    description:
+      "A scenic coastal escape filled with beaches, forests, lagoons, caves, and adventure activities.",
+  },
+  {
+    slug: "south-africa-eswatini-lesotho",
+    title: "South Africa, Eswatini & Lesotho",
+    destination: "Southern Africa",
+    duration: "12 Days",
+    price: "From $1,450",
+    location: "South Africa · Eswatini · Lesotho",
+    image: "/images/eswatini-lesotho.jpg",
+    description:
+      "A cross-border journey through culture, mountains, wildlife, and unforgettable landscapes.",
+  },
+  {
+    slug: "thrill-seekers",
+    title: "Thrill Seekers",
+    destination: "Adventure",
+    duration: "Custom",
+    price: "From $780",
+    location: "South Africa · Zimbabwe · Botswana",
+    image: "/images/thrill-seekers.jpg",
+    description:
+      "Adventure-focused experiences including ziplining, hiking, safari, kayaking, and helicopter flights.",
+  },
+];
