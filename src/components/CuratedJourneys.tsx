@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { journeys } from "../data/journeys";
+import { journeys } from "@/data/journeys";
 
 export default function CuratedJourneys() {
 	return (
@@ -73,7 +73,7 @@ export default function CuratedJourneys() {
 								</p>
 
 								<p className="mt-7 max-w-xl text-lg leading-8 text-white/85">
-									{journey.description}
+									{journey.overview}
 								</p>
 
 								<div className="mt-8 flex items-center justify-between border-t border-white/25 pt-6">
