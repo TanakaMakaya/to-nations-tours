@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Chatbot from "@/components/Chatbot";
+import Footer from "@/components/Footer";
+
 
 export const metadata: Metadata = {
   title: "To Nations Tours",
@@ -17,6 +20,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+          <Footer />
+   
+          <Chatbot />
       </body>
     </html>
   );

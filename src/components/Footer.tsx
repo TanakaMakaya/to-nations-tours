@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#050b20] text-white">
       <section className="bg-[#e4eef7] px-6 py-20">
-        <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#123d70] px-8 py-16 text-center text-white md:py-24">
+        <div className="mx-auto max-w-7xl rounded-4xl bg-[#123d70] px-8 py-16 text-center text-white md:py-24">
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#d8aa32]">
             Start Your Journey
           </p>

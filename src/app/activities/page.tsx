@@ -169,7 +169,7 @@ export default function ActivitiesPage() {
                 transition={{ duration: 0.7, ease: "easeOut" }}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071126]/95 via-[#071126]/25 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#071126]/95 via-[#071126]/25 to-transparent" />
 
               <motion.div
                 initial={{ opacity: 0.88, y: 8 }}
