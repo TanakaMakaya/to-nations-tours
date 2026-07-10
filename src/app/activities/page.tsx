@@ -13,15 +13,13 @@ const activities = [
   },
   {
     title: "Bird Watching",
-    // description:
-    //   "Discover remarkable birdlife across wetlands, forests and national parks.",
+ 
     image: "/activities/bird-watching.jpg",
     size: "small",
   },
   {
     title: "Victoria Falls Experience",
-    // description:
-    //   "Experience guided tours, misty viewpoints and unforgettable river adventures.",
+  
     image: "/activities/victoria-falls.jpg",
     size: "small",
   },
