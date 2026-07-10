@@ -61,7 +61,7 @@ export default async function ContactPage({
                 href="tel:+27814372766"
                 className="mt-1 block hover:text-white"
               >
-                +27 81 437 2766
+                +27 65 166 5033
               </a>
             </div>
 

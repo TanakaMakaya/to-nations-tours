@@ -75,7 +75,7 @@ export default function Footer() {
       href="tel:+27814372766"
       className="block transition hover:text-[#2f80b9]"
     >
-      +27 81 437 2766
+           +27 65 166 5033
     </a>
 
     <p className="leading-7">

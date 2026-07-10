@@ -82,7 +82,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, scale: 1.15 }}
           animate={{ opacity: 0.16, scale: 1 }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="absolute -right-24 top-20 h-[420px] w-[420px] rounded-full bg-[#2f80b9] blur-[100px]"
+          className="absolute -right-24 top-20 h-105 w-105 rounded-full bg-[#2f80b9] blur-[100px]"
         />
 
         <motion.div
