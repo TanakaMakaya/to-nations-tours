@@ -13,9 +13,9 @@ const activities = [
   },
   {
     title: "Bird Watching",
-    description:
-      "Discover remarkable birdlife across wetlands, forests and national parks.",
-    image: "/images/activities/bird-watching.jpg",
+    // description:
+    //   "Discover remarkable birdlife across wetlands, forests and national parks.",
+    image: "/activities/bird-watching.jpg",
     size: "small",
   },
   {
@@ -36,49 +36,49 @@ const activities = [
     title: "Bush Breakfast",
     description:
       "Enjoy a memorable breakfast experience surrounded by peaceful African landscapes.",
-    image: "/images/activities/bush-breakfast.jpg",
+    image: "/activities/bush-breakfast.jpeg",
     size: "large",
   },
   {
     title: "Cango Caves",
-    description:
-      "Explore extraordinary underground chambers and ancient limestone formations.",
-    image: "/images/activities/cango-caves.jpg",
+    // description:
+    //   "Explore extraordinary underground chambers and ancient limestone formations.",
+    image: "/activities/cango-caves.jpg",
     size: "small",
   },
   {
     title: "Canoeing & Kayaking",
-    description:
-      "Paddle through rivers, lagoons and scenic waterways at a relaxed pace.",
-    image: "/images/activities/canoeing.jpg",
+    // description:
+    //   "Paddle through rivers, lagoons and scenic waterways at a relaxed pace.",
+    image: "/activities/canoeing.jpg",
     size: "small",
   },
   {
     title: "Wine & Food Experiences",
     description:
       "Taste award-winning wines, regional cuisine and carefully selected local flavours.",
-    image: "/images/activities/wine-tasting.jpg",
+    image: "/activities/wine-tasting.jpg",
     size: "wide",
   },
   {
     title: "Hiking & Walking",
-    description:
-      "Explore mountain trails, forests, coastlines and nature reserves on foot.",
-    image: "/images/activities/hiking.jpg",
+    // description:
+    //   "Explore mountain trails, forests, coastlines and nature reserves on foot.",
+    image: "/activities/hiking.jpg",
     size: "small",
   },
   {
     title: "Adventure Activities",
-    description:
-      "Choose from ziplining, surfing, bungee jumping and thrilling outdoor experiences.",
-    image: "/images/activities/adventure.jpg",
+    // description:
+    //   "Choose from ziplining, surfing, bungee jumping and thrilling outdoor experiences.",
+    image: "/activities/adventure.jpg",
     size: "small",
   },
   {
     title: "Mokoro Safari",
     description:
       "Glide through the peaceful Okavango Delta in a traditional mokoro canoe.",
-    image: "/images/activities/mokoro-safari.jpg",
+    image: "/activities/mokoro-safari.jpg",
     size: "large",
   },
 ];
@@ -177,9 +177,9 @@ export default function ActivitiesPage() {
                 transition={{ duration: 0.3 }}
                 className="absolute inset-x-0 bottom-0 p-6 text-white md:p-7"
               >
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#c9e2ff]">
+                {/* <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#c9e2ff]">
                   To Nations Experience
-                </p>
+                </p> */}
 
                 <h2 className="mt-3 font-serif text-3xl leading-tight md:text-4xl">
                   {activity.title}
