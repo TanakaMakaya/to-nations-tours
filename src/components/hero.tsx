@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#071126]/50" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#071126]/80 via-[#071126]/45 to-transparent" />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-6 pb-14 pt-32 md:pb-24">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-6 pb-50 pt-32 md:pb-24">
         <div className="max-w-3xl text-white">
           <p className="mb-6 inline-flex rounded-full bg-white/90 px-5 py-3 text-[10px] font-bold uppercase tracking-[0.25em] text-[#12345a] sm:text-xs sm:tracking-[0.35em]">
             To Nations · Authentic African Journeys
