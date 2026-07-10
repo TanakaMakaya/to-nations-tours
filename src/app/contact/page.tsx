@@ -39,7 +39,7 @@ export default async function ContactPage({
       <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-24 lg:grid-cols-[1fr_380px]">
         <BookingForm tripName={selectedJourney?.title} />
 
-        <aside className="h-fit rounded-[2rem] bg-[#071126] p-8 text-white lg:sticky lg:top-28">
+        <aside className="h-fit rounded-4xl bg-[#071126] p-8 text-white lg:sticky lg:top-28">
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#d8aa32]">
             Contact Details
           </p>

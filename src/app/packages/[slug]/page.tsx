@@ -124,7 +124,7 @@ export default async function JourneyPage({ params }: PageProps) {
 					</section>
 				</div>
 
-				<aside className="h-fit rounded-[2rem] bg-white p-8 shadow-xl lg:sticky lg:top-28">
+				<aside className="h-fit rounded-4xl bg-white p-8 shadow-xl lg:sticky lg:top-28">
 					<p className="font-serif text-3xl text-[#071126]">{journey.price}</p>
 					<p className="mt-2 text-slate-500">{journey.childPrice}</p>
 

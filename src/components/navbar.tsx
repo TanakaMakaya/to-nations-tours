@@ -36,7 +36,7 @@ export default function Navbar() {
             width={220}
             height={80}
             priority
-            className="h-auto w-[155px] object-contain transition duration-300 hover:scale-[1.03] sm:w-[180px] lg:w-[210px]"
+            className="h-auto w-38.75 object-contain transition duration-300 hover:scale-[1.03] sm:w-45 lg:w-52.5"
           />
         </Link>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
       <div
         className={`overflow-hidden border-t border-[#071126]/10 bg-[#e4eef7] transition-all duration-300 lg:hidden ${
           isOpen
-            ? "max-h-[520px] opacity-100"
+            ? "max-h-130 opacity-100"
             : "pointer-events-none max-h-0 opacity-0"
         }`}
       >

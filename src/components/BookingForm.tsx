@@ -65,7 +65,7 @@ export default function BookingForm({
 
   if (status === "success") {
     return (
-      <div className="rounded-[2rem] bg-white p-8 shadow-sm md:p-10">
+      <div className="rounded-4xl bg-white p-8 shadow-sm md:p-10">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-3xl text-green-700">
           ✓
         </div>
@@ -93,7 +93,7 @@ export default function BookingForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-[2rem] bg-white p-6 shadow-sm md:p-10"
+      className="rounded-4xl bg-white p-6 shadow-sm md:p-10"
     >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="md:col-span-2">

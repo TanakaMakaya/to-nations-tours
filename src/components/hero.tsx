@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[760px] overflow-hidden">
+    <section className="relative h-screen min-h-190 overflow-hidden">
       <video
         autoPlay
         muted
@@ -14,7 +14,7 @@ export default function Hero() {
       </video>
 
       <div className="absolute inset-0 bg-[#071126]/50" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#071126]/80 via-[#071126]/45 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-[#071126]/80 via-[#071126]/45 to-transparent" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-6 pb-50 pt-32 md:pb-24">
         <div className="max-w-3xl text-white">
