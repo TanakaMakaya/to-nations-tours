@@ -9,7 +9,7 @@ export const essenceOfSouthAfrica: Journey = {
   price: "From $1,950 / Adult",
   childPrice: "From $1,200 / Child",
   location: "Cape Town · Cape Winelands · Safari",
-  image: "/images/journeys/essence-south-africa.jpg",
+  image: "/images/essence-south-africa.jpg",
 
   transportation: "Bus, Airlines",
   tourType: "Eco-Tour, Hiking",
