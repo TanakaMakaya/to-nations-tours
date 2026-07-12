@@ -1,16 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-
-type BookingFormProps = {
-  tripName?: string;
-};
+import { useSearchParams } from "next/navigation";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-export default function BookingForm({
-  tripName = "",
-}: BookingFormProps) {
+export default function BookingForm() {
+  const searchParams = useSearchParams();
+  const selectedTrip = searchParams.get("trip") ?? "";
+
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -23,7 +21,7 @@ export default function BookingForm({
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    const bookingData = {
+    const payload = {
       tripName: formData.get("tripName"),
       fullName: formData.get("fullName"),
       email: formData.get("email"),
@@ -42,7 +40,7 @@ export default function BookingForm({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(bookingData),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
@@ -74,9 +72,9 @@ export default function BookingForm({
           Enquiry received
         </h2>
 
-        <p className="mt-4 max-w-xl leading-7 text-slate-600">
-          Thank you for contacting To Nations Tours. One of our consultants
-          will contact you shortly.
+        <p className="mt-4 leading-7 text-slate-600">
+          Thank you for contacting To Nations Tours. One of our travel
+          consultants will contact you shortly.
         </p>
 
         <button
@@ -89,6 +87,9 @@ export default function BookingForm({
       </div>
     );
   }
+
+  const inputClass =
+    "w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-[#071126] outline-none transition focus:border-[#2f80b9]";
 
   return (
     <form
@@ -108,10 +109,10 @@ export default function BookingForm({
             id="tripName"
             name="tripName"
             type="text"
-            defaultValue={tripName}
-            readOnly={Boolean(tripName)}
+            defaultValue={selectedTrip}
+            placeholder="Choose or enter a journey"
             required
-            className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -122,14 +123,13 @@ export default function BookingForm({
           >
             Full name
           </label>
-
           <input
             id="fullName"
             name="fullName"
             type="text"
             autoComplete="name"
             required
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -140,14 +140,13 @@ export default function BookingForm({
           >
             Email address
           </label>
-
           <input
             id="email"
             name="email"
             type="email"
             autoComplete="email"
             required
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -158,14 +157,13 @@ export default function BookingForm({
           >
             Country
           </label>
-
           <input
             id="country"
             name="country"
             type="text"
             autoComplete="country-name"
             required
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -176,14 +174,13 @@ export default function BookingForm({
           >
             Contact number
           </label>
-
           <input
             id="phone"
             name="phone"
             type="tel"
             autoComplete="tel"
             required
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -194,12 +191,11 @@ export default function BookingForm({
           >
             Preferred travel date
           </label>
-
           <input
             id="travelDate"
             name="travelDate"
             type="date"
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -210,7 +206,6 @@ export default function BookingForm({
           >
             Number of adults
           </label>
-
           <input
             id="adults"
             name="adults"
@@ -218,7 +213,7 @@ export default function BookingForm({
             min="1"
             defaultValue="1"
             required
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -229,14 +224,13 @@ export default function BookingForm({
           >
             Number of children
           </label>
-
           <input
             id="children"
             name="children"
             type="number"
             min="0"
             defaultValue="0"
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -247,16 +241,13 @@ export default function BookingForm({
           >
             Enquiry subject
           </label>
-
           <input
             id="subject"
             name="subject"
             type="text"
-            defaultValue={
-              tripName ? `Booking enquiry: ${tripName}` : "Tour booking enquiry"
-            }
+            defaultValue="Tour booking enquiry"
             required
-            className="w-full rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={inputClass}
           />
         </div>
 
@@ -267,14 +258,13 @@ export default function BookingForm({
           >
             Message
           </label>
-
           <textarea
             id="message"
             name="message"
             rows={6}
             placeholder="Tell us about your preferred dates, accommodation or special requests."
             required
-            className="w-full resize-none rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-[#2f80b9]"
+            className={`${inputClass} resize-none`}
           />
         </div>
       </div>
