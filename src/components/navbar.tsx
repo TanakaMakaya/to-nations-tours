@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import NavLink from "@/components/layout/NavLink";
 
 const navigation = [
   { label: "Journeys", href: "/packages" },
@@ -43,13 +44,13 @@ export default function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden items-center gap-7 lg:flex xl:gap-10">
           {navigation.map((item) => (
-            <Link
+            <NavLink
               key={item.label}
               href={item.href}
-              className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#071126] transition hover:text-[#2f80b9] xl:text-xs xl:tracking-[0.35em]"
+             // className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#071126] transition hover:text-[#2f80b9] xl:text-xs xl:tracking-[0.35em]"
             >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
         </div>
 
