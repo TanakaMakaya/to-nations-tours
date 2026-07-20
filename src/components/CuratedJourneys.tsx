@@ -49,7 +49,7 @@ export default function CuratedJourneys() {
 								<img
 									src={journey.image}
 									alt={journey.title}
-									className="h-[360px] w-full object-cover transition duration-700 hover:scale-105 md:h-[520px]"
+									className="h-90 w-full object-cover transition duration-700 hover:scale-105 md:h-[520px]"
 								/>
 							</motion.div>
 

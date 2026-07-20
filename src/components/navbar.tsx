@@ -11,7 +11,7 @@ const navigation = [
   { label: "Destinations", href: "/destinations" },
   { label: "Activities", href: "/activities" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Journal", href: "/journal" },
 ];
 
 export default function Navbar() {
