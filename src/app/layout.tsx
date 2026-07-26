@@ -7,9 +7,39 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 export const metadata: Metadata = {
-  title: "To Nations Tours",
-  description: "Authentic journeys and meaningful memories across Africa.",
+ metadataBase: new URL("https://www.tonationstours.com"),
+
+  title: {
+    default: "To Nations Tours",
+    template: "%s | To Nations Tours",
+  },
+
+  description:
+    "Authentic journeys and meaningful memories across South Africa, Zimbabwe and Botswana.",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "To Nations Tours",
+    description:
+      "Authentic journeys and meaningful memories across Southern Africa.",
+    url: "https://www.tonationstours.com",
+    siteName: "To Nations Tours",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "To Nations Tours — Authentic African journeys",
+      },
+    ],
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,
