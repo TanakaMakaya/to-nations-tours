@@ -1,3 +1,8 @@
+import CapeTownArticle from "./cape-town";
+// import SafariPackingArticle from "./packing";
+import ZimbabweArticle from "./zimbabwe";
+// import BotswanaArticle from "./botswana";
+
 export interface JournalArticle {
   slug: string;
   title: string;
@@ -17,7 +22,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Travel Guide",
     readTime: "4 min read",
     date: "July 2026",
-    heroImage: "/images/journal/cape-town.jpg",
+    heroImage: "/images/journal/cape-town-hero.webp",
   },
   {
     slug: "what-to-pack-for-an-african-safari",
@@ -27,7 +32,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Safari Tips",
     readTime: "3 min read",
     date: "July 2026",
-    heroImage: "/images/journal/packing.jpg",
+    heroImage: "/images/journal/packing.webp",
   },
   {
     slug: "hidden-gems-of-zimbabwe",
@@ -37,7 +42,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Zimbabwe",
     readTime: "5 min read",
     date: "July 2026",
-    heroImage: "/images/journal/zimbabwe.jpg",
+    heroImage: "/images/journal/zimbabwe.webp",
   },
   {
     slug: "luxury-safaris-in-botswana",
@@ -47,6 +52,16 @@ export const journalArticles: JournalArticle[] = [
     category: "Botswana",
     readTime: "5 min read",
     date: "July 2026",
-    heroImage: "/images/journal/botswana.jpg",
+    heroImage: "/images/journal/botswana.webp",
   },
 ];
+
+export const articleContent: Record<string, React.ComponentType> = {
+  "ultimate-first-time-guide-to-cape-town": CapeTownArticle,
+
+  // Add these as you create them:
+
+  // "what-to-pack-for-an-african-safari": SafariPackingArticle,
+  "hidden-gems-of-zimbabwe": ZimbabweArticle,
+  // "luxury-safaris-in-botswana": BotswanaArticle,
+};
