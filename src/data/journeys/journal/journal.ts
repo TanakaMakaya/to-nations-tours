@@ -1,7 +1,8 @@
+import BotswanaArticle from "./botswana";
 import CapeTownArticle from "./cape-town";
-// import SafariPackingArticle from "./packing";
+import SafariPackingArticle from "./packing";
 import ZimbabweArticle from "./zimbabwe";
-// import BotswanaArticle from "./botswana";
+
 
 export interface JournalArticle {
   slug: string;
@@ -61,7 +62,7 @@ export const articleContent: Record<string, React.ComponentType> = {
 
   // Add these as you create them:
 
-  // "what-to-pack-for-an-african-safari": SafariPackingArticle,
+   "what-to-pack-for-an-african-safari": SafariPackingArticle,
   "hidden-gems-of-zimbabwe": ZimbabweArticle,
-  // "luxury-safaris-in-botswana": BotswanaArticle,
+  "luxury-safaris-in-botswana": BotswanaArticle,
 };

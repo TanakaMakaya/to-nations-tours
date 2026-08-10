@@ -1,0 +1,196 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function BotswanaArticle() {
+  return (
+    <article className="prose prose-lg max-w-none prose-headings:text-[#071126] prose-p:text-slate-700">
+
+      <p className="lead">
+        Imagine waking up to the gentle sounds of birdsong as the African sun
+        rises over a vast wilderness. From your private deck, you watch a
+        family of elephants quietly making their way to the water's edge while
+        the only other sound is the rustle of the breeze through the reeds.
+      </p>
+
+      <p>
+        This isn't just another holiday—it's Botswana. Known for its
+        breathtaking landscapes, exceptional wildlife and exclusive safari
+        experiences, Botswana has earned its reputation as one of Africa's most
+        sought-after luxury destinations.
+      </p>
+
+      <Image
+        src="/images/journal/botswana-hero.webp"
+        alt="Luxury safari experience in Botswana"
+        width={1200}
+        height={800}
+        className="my-8 rounded-3xl"
+      />
+
+      <h2>Why Botswana Stands Apart</h2>
+
+      <p>
+        Unlike many safari destinations, Botswana has embraced a low-volume,
+        high-value tourism model. This approach protects fragile ecosystems
+        while creating a more exclusive and intimate safari experience.
+      </p>
+
+      <ul>
+        <li>Fewer vehicles at wildlife sightings</li>
+        <li>Personalised service</li>
+        <li>Unspoilt landscapes</li>
+        <li>Luxurious lodges in extraordinary locations</li>
+        <li>Peaceful and intimate safari experiences</li>
+      </ul>
+
+  
+
+      <blockquote>
+        For many travellers, this exclusivity is what makes Botswana truly
+        special.
+      </blockquote>
+
+      <h2>Extraordinary Wildlife Encounters</h2>
+
+      <p>
+        Botswana is home to some of Africa's most remarkable wildlife. Depending
+        on where you travel, you may encounter elephants, lions, leopards,
+        African wild dogs, buffalo, hippos, crocodiles, giraffes and hundreds
+        of bird species. 
+      </p>
+
+      <p>
+        One of Botswana's greatest strengths is that wildlife often comes to
+        you. It's not unusual to see elephants wandering past your lodge or
+        hear lions calling in the distance after sunset. 
+      </p>
+
+      <h2>Places That Define Luxury</h2>
+
+      <h3>Okavango Delta</h3>
+
+      <p>
+        A UNESCO World Heritage Site, the Okavango Delta is one of the world's
+        most extraordinary natural wonders. Explore winding waterways by
+        traditional mokoro canoe, enjoy guided walking safaris or take a scenic
+        helicopter flight above the Delta. 
+      </p>
+
+      <h3>Chobe National Park</h3>
+
+      <p>
+        Famous for one of the largest elephant populations on Earth, Chobe
+        offers exceptional game drives and unforgettable sunset cruises along
+        the Chobe River. Watching hundreds of elephants gather at the water's
+        edge is an experience you'll never forget. 
+      </p>
+
+      <Image
+        src="/images/journal/chobe-elephants.webp"
+        alt="Elephants gathering along the Chobe River"
+        width={1200}
+        height={800}
+        className="my-8 rounded-3xl"
+      />
+
+      <h3>Moremi Game Reserve</h3>
+
+      <p>
+        Combining lagoons, forests and open plains, Moremi offers some of
+        Botswana's finest safari experiences and incredible opportunities for
+        wildlife photography. 
+      </p>
+
+      <h2>More Than a Safari</h2>
+
+      <p>
+        Luxury in Botswana isn't only about beautiful accommodation; it's about
+        meaningful experiences. Picture yourself dining beneath a sky filled
+        with stars, sipping coffee as the sun rises over the Delta or ending
+        the day beside a campfire while listening to stories from your guide. 
+      </p>
+
+      <h2>A Moment to Remember</h2>
+
+      <p>
+        As the sun begins to set, the sky turns shades of gold, orange and deep
+        crimson. Your safari vehicle comes to a gentle stop beside the Chobe
+        River where a herd of elephants quietly drinks before crossing the
+        water. There's no rush, no crowds—just the peaceful rhythm of nature
+        unfolding before your eyes.
+      </p>
+
+      <h2>Best Time to Visit Botswana</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Season</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>May – October</td>
+            <td>Peak wildlife viewing and safaris</td>
+          </tr>
+          <tr>
+            <td>November – April</td>
+            <td>Birdwatching and lush landscapes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        The dry season from May to October is widely considered the best time
+        to visit as wildlife naturally gathers around rivers and waterholes,
+        creating exceptional game-viewing opportunities.
+      </p>
+
+      <h2>Travel Responsibly</h2>
+
+      <p>
+        Botswana is a global leader in conservation and responsible tourism.
+        Choose operators and lodges that support conservation initiatives,
+        employ local communities and respect wildlife. 
+      </p>
+
+      <h2>Ready for a Luxury Botswana Safari?</h2>
+
+      <p>
+        At To Nations Tours, we design personalised journeys that match your
+        travel style, interests and expectations. Whether you're celebrating a
+        honeymoon, a milestone or fulfilling a lifelong dream, we'll help you
+        create a safari experience that's uniquely yours. 
+      </p>
+
+      <div className="not-prose mt-12 rounded-3xl bg-[#071126] p-8 text-center text-white">
+        <h3 className="mb-4 text-3xl font-serif">
+          Explore Botswana With Us
+        </h3>
+
+        <p className="mb-6 text-slate-300">
+          Discover luxury safaris, unforgettable wildlife encounters and
+          tailor-made Southern African adventures.
+        </p>
+
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link
+            href="/packages"
+            className="rounded-full bg-[#2f80b9] px-6 py-3 font-semibold text-white transition hover:bg-[#25689a]"
+          >
+            View Botswana Tours
+          </Link>
+
+          <Link
+            href="/contact"
+            className="rounded-full border border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-[#071126]"
+          >
+            Plan Your Journey
+          </Link>
+        </div>
+      </div>
+
+    </article>
+  );
+}

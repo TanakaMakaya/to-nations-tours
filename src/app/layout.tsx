@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import JournalPreview from "@/components/JournalPreview";
 
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <JournalPreview />
           <Footer />
    
           <Chatbot />

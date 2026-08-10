@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import JournalSidebar from "@/components/journalSidebar";
+
 import {
   journalArticles,
   articleContent,
@@ -28,6 +30,7 @@ export default async function ArticlePage({
 
   return (
     <main className="bg-[#e4eef7] pt-32 pb-20">
+      {/* Hero Section */}
       <section className="mx-auto max-w-5xl px-6">
         <div className="mb-8">
           <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#2f80b9]">
@@ -56,9 +59,14 @@ export default async function ArticlePage({
         </div>
       </section>
 
-      <section className="mx-auto mt-16 max-w-4xl px-6">
-        <ArticleContent />
-      </section>
+      {/* Article + Sidebar */}
+      <div className="mx-auto mt-16 grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_320px]">
+        <article className="min-w-0">
+          <ArticleContent />
+        </article>
+
+        <JournalSidebar currentSlug={slug} />
+      </div>
     </main>
   );
 }
