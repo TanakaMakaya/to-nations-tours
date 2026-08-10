@@ -23,7 +23,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Travel Guide",
     readTime: "4 min read",
     date: "July 2026",
-    heroImage: "/images/journal/cape-town-hero.webp",
+    heroImage: "https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/Screenshot%202026-08-10%20at%2020.55.09.png",
   },
   {
     slug: "what-to-pack-for-an-african-safari",
@@ -33,7 +33,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Safari Tips",
     readTime: "3 min read",
     date: "July 2026",
-    heroImage: "/images/journal/packing.webp",
+    heroImage: "https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/african%20safari",
   },
   {
     slug: "hidden-gems-of-zimbabwe",
@@ -43,7 +43,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Zimbabwe",
     readTime: "5 min read",
     date: "July 2026",
-    heroImage: "/images/journal/zimbabwe.webp",
+    heroImage: "https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/greatzimbwe",
   },
   {
     slug: "luxury-safaris-in-botswana",
@@ -53,7 +53,7 @@ export const journalArticles: JournalArticle[] = [
     category: "Botswana",
     readTime: "5 min read",
     date: "July 2026",
-    heroImage: "/images/journal/botswana.webp",
+    heroImage: "https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/Botswana%20elephants",
   },
 ];
 

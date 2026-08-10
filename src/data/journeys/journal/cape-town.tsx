@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function CapeTownArticle() {
   return (
     <article className="prose prose-lg max-w-none prose-headings:text-[#071126] prose-p:text-slate-700">
@@ -13,7 +14,7 @@ export default function CapeTownArticle() {
       </p>
 
       <Image
-        src="/images/journal/cape-town-hero.webp"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/Screenshot%202026-08-10%20at%2020.55.09.png"
         alt="Cape Town skyline with Table Mountain"
         width={1200}
         height={800}
