@@ -81,7 +81,7 @@ export default function CapeTownArticle() {
         className="my-8 rounded-3xl"
       />
 
-      <h2>When Is the Best Time to Visit?</h2>
+      <h2><strong>When Is the Best Time to Visit?</strong></h2>
 
       <table>
         <thead>
@@ -115,7 +115,7 @@ export default function CapeTownArticle() {
         the best all-round experience.
       </p>
 
-      <h2>What Should You Eat?</h2>
+      <h2><strong>What Should You Eat?</strong></h2>
 
       <p>
         Cape Towns food scene is as diverse as its people.
@@ -135,7 +135,7 @@ export default function CapeTownArticle() {
         estates.
       </p>
 
-      <h2>Where Should You Stay?</h2>
+      <h2><strong>Where Should You Stay?</strong></h2>
 
       <ul>
         <li><strong>Luxury:</strong> V&A Waterfront or Camps Bay</li>
@@ -167,7 +167,7 @@ export default function CapeTownArticle() {
         and hiking trails exactly as you found them.
       </p>
 
-      <h2>Ready to Experience Cape Town?</h2>
+      <h2><strong>Ready to Experience Cape Town?</strong></h2>
 
       <p>
         At To Nations Tours, we believe every journey should be more than a
