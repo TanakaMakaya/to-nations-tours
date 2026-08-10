@@ -14,7 +14,7 @@ export default function CapeTownArticle() {
       </p>
 
       <Image
-        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/Screenshot%202026-08-10%20at%2020.55.09.png"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/Screenshot%202026-08-10%20at%2020.55.22.png"
         alt="Cape Town skyline with Table Mountain"
         width={1200}
         height={800}
@@ -73,7 +73,7 @@ export default function CapeTownArticle() {
       </p>
 
       <Image
-        src="/images/journal/bo-kaap.webp"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/capetown%20houses"
         alt="Colourful houses in Bo-Kaap"
         width={1200}
         height={800}
