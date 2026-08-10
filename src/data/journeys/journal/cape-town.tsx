@@ -147,9 +147,10 @@ export default function CapeTownArticle() {
         Each neighbourhood offers easy access to Cape Town's main attractions
         while providing its own unique atmosphere.
       </p>
+          <br />
 
       <h2><strong>Travel Like a Local</strong></h2>
-      <br />
+  
 
       <p>
         Instead of rushing to Table Mountain in the afternoon, head there
