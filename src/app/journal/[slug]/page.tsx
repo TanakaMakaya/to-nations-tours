@@ -65,7 +65,9 @@ export default async function ArticlePage({
           <ArticleContent />
         </article>
 
-        <JournalSidebar currentSlug={slug} />
+       <aside className="hidden lg:block">
+  <JournalSidebar currentSlug={slug} />
+</aside>
       </div>
     </main>
   );
