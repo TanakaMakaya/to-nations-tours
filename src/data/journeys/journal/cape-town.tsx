@@ -22,7 +22,7 @@ export default function CapeTownArticle() {
         className="my-8 rounded-3xl"
       />
 
-      <h2>Five Experiences You Can't Miss</h2>
+      <h2><strong>Five Experiences You Can't Miss</strong></h2>
 
       <h3>1. Ride the Table Mountain Cableway</h3>
 
@@ -148,7 +148,8 @@ export default function CapeTownArticle() {
         while providing its own unique atmosphere.
       </p>
 
-      <h2>Travel Like a Local</h2>
+      <h2><strong>Travel Like a Local</strong></h2>
+      <br />
 
       <p>
         Instead of rushing to Table Mountain in the afternoon, head there
