@@ -48,7 +48,7 @@ export default async function ArticlePage({
           <span>{article.readTime}</span>
         </div>
 
-        <div className="relative mt-10 h-[500px] overflow-hidden rounded-3xl">
+        <div className="relative mt-10 h-125 overflow-hidden rounded-3xl">
           <Image
             src={article.heroImage}
             alt={article.title}
