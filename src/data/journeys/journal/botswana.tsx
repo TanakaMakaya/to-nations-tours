@@ -20,7 +20,7 @@ export default function BotswanaArticle() {
       </p>
 
       <Image
-        src="/images/journal/botswana-hero.webp"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/safari%20botswana.jpg"
         alt="Luxury safari experience in Botswana"
         width={1200}
         height={800}
@@ -49,7 +49,7 @@ export default function BotswanaArticle() {
         For many travellers, this exclusivity is what makes Botswana truly
         special.
       </blockquote>
-      <br />
+      <br/>
 
       <h2><strong>Extraordinary Wildlife Encounters</strong></h2>
 
@@ -65,7 +65,7 @@ export default function BotswanaArticle() {
         you. It's not unusual to see elephants wandering past your lodge or
         hear lions calling in the distance after sunset. 
       </p>
-      <br />
+      <br/>
 
       <h2><strong>Places That Define Luxury</strong></h2>
 
@@ -77,7 +77,7 @@ export default function BotswanaArticle() {
         traditional mokoro canoe, enjoy guided walking safaris or take a scenic
         helicopter flight above the Delta. 
       </p>
-      <br />
+      <br/>
 
       <h3><strong>Chobe National Park</strong></h3>
 
@@ -89,7 +89,7 @@ export default function BotswanaArticle() {
       </p>
 
       <Image
-        src="/images/journal/chobe-elephants.webp"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/chober%20river.jpg"
         alt="Elephants gathering along the Chobe River"
         width={1200}
         height={800}
@@ -103,7 +103,7 @@ export default function BotswanaArticle() {
         Botswana's finest safari experiences and incredible opportunities for
         wildlife photography. 
       </p>
-      <br />
+      <br/>
 
       <h2><strong>More Than a Safari</strong></h2>
 
@@ -124,34 +124,38 @@ export default function BotswanaArticle() {
         water. There's no rush, no crowds—just the peaceful rhythm of nature
         unfolding before your eyes.
       </p>
-      <br />
+      <br/>
 
       <h2><strong>Best Time to Visit Botswana</strong></h2>
 
-      <table className="table-layout: auto">
+      <table className="table-layout: auto border-collapse border border-slate-400">
         <thead>
-          <tr>
+          <tr className="table-layout: auto border-collapse border border-slate-200">
             <th>Season</th>
             <th>Best For</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr className="table-layout: auto border-collapse border border-slate-200">
             <td>May – October</td>
             <td>Peak wildlife viewing and safaris</td>
           </tr>
-          <tr>
+          <tr className="table-layout: auto border-collapse border border-slate-200">
             <td>November – April</td>
             <td>Birdwatching and lush landscapes</td>
           </tr>
         </tbody>
       </table>
 
+      <br/>
+
       <p>
         The dry season from May to October is widely considered the best time
         to visit as wildlife naturally gathers around rivers and waterholes,
         creating exceptional game-viewing opportunities.
       </p>
+
+      <br />
 
       <h2><strong>Travel Responsibly</strong></h2>
 
@@ -160,6 +164,8 @@ export default function BotswanaArticle() {
         Choose operators and lodges that support conservation initiatives,
         employ local communities and respect wildlife. 
       </p>
+
+      <br/>
 
       <h2><strong>Ready for a Luxury Botswana Safari?</strong></h2>
 
