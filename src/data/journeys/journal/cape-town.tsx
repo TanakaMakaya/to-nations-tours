@@ -83,32 +83,52 @@ export default function CapeTownArticle() {
 
       <h2><strong>When Is the Best Time to Visit?</strong></h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th>Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Summer (Nov–Mar)</td>
-            <td>Beaches, sightseeing, wine tours</td>
-          </tr>
-          <tr>
-            <td>Autumn (Apr–May)</td>
-            <td>Mild weather and fewer crowds</td>
-          </tr>
-          <tr>
-            <td>Winter (Jun–Aug)</td>
-            <td>Whale watching and lower prices</td>
-          </tr>
-          <tr>
-            <td>Spring (Sep–Oct)</td>
-            <td>Wildflowers and outdoor adventures</td>
-          </tr>
-        </tbody>
-      </table>
+      <table className="w-full border-collapse border border-slate-400">
+  <thead className="bg-sky-700 text-white">
+    <tr>
+      <th className="border border-slate-300 px-6 py-3 text-left font-semibold">
+        Season
+      </th>
+      <th className="border border-slate-300 px-6 py-3 text-left font-semibold">
+        Best For
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        Summer (Nov–Mar)
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Beaches, sightseeing, wine tours
+      </td>
+    </tr>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        Autumn (Apr–May)
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Mild weather and fewer crowds
+      </td>
+    </tr>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        Winter (Jun–Aug)
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Whale watching and lower prices
+      </td>
+    </tr>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        Spring (Sep–Oct)
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Wildflowers and outdoor adventures
+      </td>
+    </tr>
+  </tbody>
+</table>
 
       <p>
         If its your first visit, travelling between October and April offers
@@ -122,7 +142,7 @@ export default function CapeTownArticle() {
         Cape Towns food scene is as diverse as its people.
       </p>
 
-      <ul>
+      <ul className="list-disc pl-6">
         <li>Cape Malay Curry</li>
         <li>Bobotie</li>
         <li>Fresh Seafood</li>
@@ -140,7 +160,7 @@ export default function CapeTownArticle() {
 
       <h2><strong>Where Should You Stay?</strong></h2>
 
-      <ul>
+      <ul className="list-disc pl-6">
         <li><strong>Luxury:</strong> V&A Waterfront or Camps Bay</li>
         <li><strong>Mid-range:</strong> Sea Point or Green Point</li>
         <li><strong>Budget:</strong> Gardens or Observatory</li>
