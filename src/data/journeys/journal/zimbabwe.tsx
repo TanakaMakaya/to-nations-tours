@@ -12,14 +12,14 @@ export default function ZimbabweArticle() {
       </p>
 
       <Image
-        src="/images/journal/zimbabwe-hero.webp"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/vic%20falls.jpg"
         alt="Victoria Falls in Zimbabwe"
         width={1200}
         height={800}
         className="my-8 rounded-3xl"
       />
 
-      <h2>Hidden Gems You Shouldn't Miss</h2>
+      <h2><strong>Hidden Gems You Shouldn't Miss</strong></h2>
 
       <h3>1. Great Zimbabwe National Monument</h3>
 
@@ -70,7 +70,7 @@ export default function ZimbabweArticle() {
       </p>
 
       <Image
-        src="/images/journal/matobo.webp"
+        src="https://mwidvpekdftfmpcz.public.blob.vercel-storage.com/matobo%20hills.jpg"
         alt="Granite formations in Matobo National Park"
         width={1200}
         height={800}
@@ -79,28 +79,44 @@ export default function ZimbabweArticle() {
 
       <h2>Best Time to Visit Zimbabwe</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th>Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>May – August</td>
-            <td>Safari and outdoor exploration</td>
-          </tr>
-          <tr>
-            <td>September – November</td>
-            <td>Excellent wildlife viewing</td>
-          </tr>
-          <tr>
-            <td>December – April</td>
-            <td>Green landscapes and birdwatching</td>
-          </tr>
-        </tbody>
-      </table>
+<table className="w-full border-collapse border border-slate-400">
+  <thead className="bg-sky-700 text-white">
+    <tr>
+      <th className="border border-slate-300 px-6 py-3 text-left font-semibold">
+        Season
+      </th>
+      <th className="border border-slate-300 px-6 py-3 text-left font-semibold">
+        Best For
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        May – August
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Safari and outdoor exploration
+      </td>
+    </tr>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        September – November
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Excellent wildlife viewing
+      </td>
+    </tr>
+    <tr className="hover:bg-slate-50">
+      <td className="border border-slate-300 px-6 py-3">
+        December – April
+      </td>
+      <td className="border border-slate-300 px-6 py-3">
+        Green landscapes and birdwatching
+      </td>
+    </tr>
+  </tbody>
+</table>
 
       <p>
         For most travellers, the dry season between May and October provides
@@ -109,17 +125,18 @@ export default function ZimbabweArticle() {
 
       <h2>Local Experiences Worth Trying</h2>
 
-      <ul>
+      <ul className="list-disc pl-6">
         <li>Traditional Zimbabwean cuisine</li>
         <li>Village cultural experiences</li>
         <li>Sunset cruises on the Zambezi River</li>
         <li>Walking safaris in Mana Pools</li>
         <li>Local craft markets and artisan workshops</li>
       </ul>
+      <br />
 
-      <h2>Where Should You Stay?</h2>
+      <h2><strong>Where Should You Stay?</strong></h2>
 
-      <ul>
+      <ul className="list-disc pl-6">
         <li>
           <strong>Luxury:</strong> Victoria Falls Safari Lodges and Mana Pools
           Camps
@@ -131,8 +148,10 @@ export default function ZimbabweArticle() {
           <strong>Budget:</strong> Guesthouses and backpacker lodges
         </li>
       </ul>
+      
+      <br/>
 
-      <h2>Travel Responsibly</h2>
+      <h2><strong>Travel Responsibly</strong></h2>
 
       <p>
         Support local communities, choose responsible safari operators, respect
