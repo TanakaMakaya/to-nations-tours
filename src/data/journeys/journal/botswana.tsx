@@ -143,7 +143,7 @@ export default function BotswanaArticle() {
 			</h2>
 
 			<table className="w-full border-collapse border border-slate-400">
-				<thead className="bg-blue-500 text-2xl text-white">
+				<thead className="bg-sky-700 text-white">
 					<tr>
 						<th className="border border-slate-300 px-6 py-3 text-left font-semibold">
 							Season
