@@ -31,9 +31,11 @@ export default function ZimbabweArticle() {
 				powerful kingdom that once dominated regional trade routes.
 			</p>
 
-			<blockquote>
-				Travel Tip: Visit early in the morning for cooler temperatures and fewer
-				visitors.
+			<blockquote className="bg-sky-50 border-l-4 border-sky-600 pl-6 py-4 my-6 rounded-r-lg text-slate-700">
+				<p className="text-lg">
+					<strong>Travel Tip:</strong> Visit early in the morning for cooler
+					temperatures and fewer visitors.
+				</p>
 			</blockquote>
 
 			<h3>2. Mana Pools National Park</h3>

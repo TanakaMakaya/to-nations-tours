@@ -44,10 +44,12 @@ export default function SafariPackingArticle() {
 				<li>A light rain jacket depending on the season</li>
 			</ul>
 
-			<blockquote>
-				Top Tip: Avoid bright colours and camouflage clothing. Neutral colours
-				help you blend into the natural environment, while camouflage is
-				restricted in some African countries.
+			<blockquote className="bg-sky-50 border-l-4 border-sky-600 pl-6 py-4 my-6 rounded-r-lg text-slate-700">
+				<p className="text-lg">
+					<strong>Top Tip:</strong> Avoid bright colours and camouflage
+					clothing. Neutral colours help you blend into the natural environment,
+					while camouflage is restricted in some African countries.
+				</p>
 			</blockquote>
 
 			<br />
@@ -120,7 +122,7 @@ export default function SafariPackingArticle() {
 				wear layers that you can add or remove throughout the day.
 			</p>
 
-      <br/>
+			<br />
 
 			<h2>
 				<strong>Safari Etiquette</strong>

@@ -45,10 +45,13 @@ export default function BotswanaArticle() {
 				<li>Peaceful and intimate safari experiences</li>
 			</ul>
 
-			<blockquote>
-				For many travellers, this exclusivity is what makes Botswana truly
-				special.
+			<blockquote className="bg-sky-50 border-l-4 border-sky-600 pl-6 py-4 my-6 rounded-r-lg text-slate-700">
+				<p className="text-lg italic">
+					For many travellers, this exclusivity is what makes Botswana truly
+					special.
+				</p>
 			</blockquote>
+
 			<br />
 
 			<h2>

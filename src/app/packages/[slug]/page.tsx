@@ -131,7 +131,7 @@ export default async function JourneyPage({ params }: PageProps) {
 					<div className="mt-6 space-y-3 text-sm text-slate-600">
 						<p>✓ Best Price Guaranteed</p>
 						<p>✓ No Booking Fees</p>
-						<p>✓ Professional Local Guide</p>
+					
 					</div>
 
 					<Link
