@@ -142,25 +142,29 @@ export default function BotswanaArticle() {
 				<strong>Best Time to Visit Botswana</strong>
 			</h2>
 
-			<table className="border-collapse border border-slate-400">
-				<thead>
+			<table className="w-full border-collapse border border-slate-400">
+				<thead className="bg-slate-100">
 					<tr>
-						<th className="border border-slate-300 px-4 py-2">Season</th>
-						<th className="border border-slate-300 px-4 py-2">Best For</th>
+						<th className="border border-slate-300 px-6 py-3 text-left font-semibold">
+							Season
+						</th>
+						<th className="border border-slate-300 px-6 py-3 text-left font-semibold">
+							Best For
+						</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td className="border border-slate-300 px-4 py-2">May – October</td>
-						<td className="border border-slate-300 px-4 py-2">
+					<tr className="hover:bg-slate-50">
+						<td className="border border-slate-300 px-6 py-3">May – October</td>
+						<td className="border border-slate-300 px-6 py-3">
 							Peak wildlife viewing and safaris
 						</td>
 					</tr>
-					<tr>
-						<td className="border border-slate-300 px-4 py-2">
+					<tr className="hover:bg-slate-50">
+						<td className="border border-slate-300 px-6 py-3">
 							November – April
 						</td>
-						<td className="border border-slate-300 px-4 py-2">
+						<td className="border border-slate-300 px-6 py-3">
 							Birdwatching and lush landscapes
 						</td>
 					</tr>
