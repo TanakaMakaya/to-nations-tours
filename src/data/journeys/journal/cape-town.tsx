@@ -189,6 +189,7 @@ export default function CapeTownArticle() {
         respect wildlife by keeping a safe distance and always leave beaches
         and hiking trails exactly as you found them.
       </p>
+      <br/>
 
       <h2><strong>Ready to Experience Cape Town?</strong></h2>
 
