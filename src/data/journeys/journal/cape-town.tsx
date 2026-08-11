@@ -114,6 +114,7 @@ export default function CapeTownArticle() {
         If its your first visit, travelling between October and April offers
         the best all-round experience.
       </p>
+      <br/>
 
       <h2><strong>What Should You Eat?</strong></h2>
 
@@ -134,6 +135,8 @@ export default function CapeTownArticle() {
         Franschhoek, home to some of South Africa's most celebrated wine
         estates.
       </p>
+
+      <br/>
 
       <h2><strong>Where Should You Stay?</strong></h2>
 
