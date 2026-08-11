@@ -103,6 +103,7 @@ export default function BotswanaArticle() {
         Botswana's finest safari experiences and incredible opportunities for
         wildlife photography. 
       </p>
+      <br />
 
       <h2><strong>More Than a Safari</strong></h2>
 
@@ -112,6 +113,7 @@ export default function BotswanaArticle() {
         with stars, sipping coffee as the sun rises over the Delta or ending
         the day beside a campfire while listening to stories from your guide. 
       </p>
+      <br />
 
       <h2><strong>A Moment to Remember</strong></h2>
 
@@ -122,10 +124,11 @@ export default function BotswanaArticle() {
         water. There's no rush, no crowds—just the peaceful rhythm of nature
         unfolding before your eyes.
       </p>
+      <br />
 
       <h2><strong>Best Time to Visit Botswana</strong></h2>
 
-      <table>
+      <table className="table-layout: auto">
         <thead>
           <tr>
             <th>Season</th>
