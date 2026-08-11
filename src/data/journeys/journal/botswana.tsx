@@ -27,7 +27,7 @@ export default function BotswanaArticle() {
         className="my-8 rounded-3xl"
       />
 
-      <h2>Why Botswana Stands Apart</h2>
+      <h2> <strong>Why Botswana Stands Apart</strong></h2>
 
       <p>
         Unlike many safari destinations, Botswana has embraced a low-volume,
@@ -35,7 +35,7 @@ export default function BotswanaArticle() {
         while creating a more exclusive and intimate safari experience.
       </p>
 
-      <ul>
+      <ul className="list-disc pl-6">
         <li>Fewer vehicles at wildlife sightings</li>
         <li>Personalised service</li>
         <li>Unspoilt landscapes</li>
@@ -49,8 +49,9 @@ export default function BotswanaArticle() {
         For many travellers, this exclusivity is what makes Botswana truly
         special.
       </blockquote>
+      <br />
 
-      <h2>Extraordinary Wildlife Encounters</h2>
+      <h2><strong>Extraordinary Wildlife Encounters</strong></h2>
 
       <p>
         Botswana is home to some of Africa's most remarkable wildlife. Depending
@@ -64,8 +65,9 @@ export default function BotswanaArticle() {
         you. It's not unusual to see elephants wandering past your lodge or
         hear lions calling in the distance after sunset. 
       </p>
+      <br />
 
-      <h2>Places That Define Luxury</h2>
+      <h2><strong>Places That Define Luxury</strong></h2>
 
       <h3>Okavango Delta</h3>
 
@@ -75,8 +77,9 @@ export default function BotswanaArticle() {
         traditional mokoro canoe, enjoy guided walking safaris or take a scenic
         helicopter flight above the Delta. 
       </p>
+      <br />
 
-      <h3>Chobe National Park</h3>
+      <h3><strong>Chobe National Park</strong></h3>
 
       <p>
         Famous for one of the largest elephant populations on Earth, Chobe
@@ -93,7 +96,7 @@ export default function BotswanaArticle() {
         className="my-8 rounded-3xl"
       />
 
-      <h3>Moremi Game Reserve</h3>
+      <h3><strong>Moremi Game Reserve</strong></h3>
 
       <p>
         Combining lagoons, forests and open plains, Moremi offers some of
@@ -101,7 +104,7 @@ export default function BotswanaArticle() {
         wildlife photography. 
       </p>
 
-      <h2>More Than a Safari</h2>
+      <h2><strong>More Than a Safari</strong></h2>
 
       <p>
         Luxury in Botswana isn't only about beautiful accommodation; it's about
@@ -110,7 +113,7 @@ export default function BotswanaArticle() {
         the day beside a campfire while listening to stories from your guide. 
       </p>
 
-      <h2>A Moment to Remember</h2>
+      <h2><strong>A Moment to Remember</strong></h2>
 
       <p>
         As the sun begins to set, the sky turns shades of gold, orange and deep
@@ -120,7 +123,7 @@ export default function BotswanaArticle() {
         unfolding before your eyes.
       </p>
 
-      <h2>Best Time to Visit Botswana</h2>
+      <h2><strong>Best Time to Visit Botswana</strong></h2>
 
       <table>
         <thead>
@@ -147,7 +150,7 @@ export default function BotswanaArticle() {
         creating exceptional game-viewing opportunities.
       </p>
 
-      <h2>Travel Responsibly</h2>
+      <h2><strong>Travel Responsibly</strong></h2>
 
       <p>
         Botswana is a global leader in conservation and responsible tourism.
@@ -155,7 +158,7 @@ export default function BotswanaArticle() {
         employ local communities and respect wildlife. 
       </p>
 
-      <h2>Ready for a Luxury Botswana Safari?</h2>
+      <h2><strong>Ready for a Luxury Botswana Safari?</strong></h2>
 
       <p>
         At To Nations Tours, we design personalised journeys that match your
