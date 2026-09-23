@@ -75,50 +75,51 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      <div
-        className={`overflow-hidden border-t border-[#071126]/10 bg-[#e4eef7] transition-all duration-300 lg:hidden ${
-          isOpen
-            ? "max-h-130 opacity-100"
-            : "pointer-events-none max-h-0 opacity-0"
-        }`}
+     {/* Mobile menu */}
+<div
+  className={`overflow-hidden border-t border-[#071126]/10 bg-[#e4eef7] transition-all duration-300 lg:hidden ${
+    isOpen
+      ? "max-h-130 opacity-100"
+      : "pointer-events-none max-h-0 opacity-0"
+  }`}
+>
+  <div className="mx-auto max-w-7xl px-5 py-6">
+    <div className="flex flex-col">
+      {navigation.map((item) => (
+        <Link
+          key={item.label}
+          href={item.href}
+          onClick={closeMenu}
+          className="border-b border-[#071126]/10 py-4 text-amber-50 text-sm font-bold uppercase tracking-[0.25em] transition hover:pl-2 hover:text-[#2f80b9]"
+        >
+          {item.label}
+        </Link>
+      ))}
+    </div>
+
+    <Link
+      href="/contact"
+      onClick={closeMenu}
+      className="mt-6 block rounded-full bg-[#123d70] px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.28em] !text-white transition hover:bg-[#2f80b9]"
+    >
+      Plan a Journey
+    </Link>
+
+    <div className="mt-6 space-y-2 text-sm text-[#071126]/65">
+      <a href="tel:+27814372766" className="block hover:text-[#2f80b9]">
+        +27 81 437 2766
+      </a>
+
+      <a
+        href="mailto:info@tonationstours.com"
+        className="block hover:text-[#2f80b9]"
       >
-        <div className="mx-auto max-w-7xl px-5 py-6">
-          <div className="flex flex-col">
-            {navigation.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={closeMenu}
-                className="border-b border-[#071126]/10 py-4 text-sm font-bold uppercase tracking-[0.25em] text-[#071126] transition hover:pl-2 hover:text-[#2f80b9]"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-
-          <Link
-            href="/contact"
-            onClick={closeMenu}
-            className="mt-6 block rounded-full bg-[#123d70] px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.28em] text-white transition hover:bg-[#2f80b9]"
-          >
-            Plan a Journey
-          </Link>
-
-          <div className="mt-6 space-y-2 text-sm text-[#071126]/65">
-            <a href="tel:+27814372766" className="block hover:text-[#2f80b9]">
-              +27 81 437 2766
-            </a>
-
-            <a
-              href="mailto:info@tonationstours.com"
-              className="block hover:text-[#2f80b9]"
-            >
-              info@tonationstours.com
-            </a>
-          </div>
-        </div>
-      </div>
+        info@tonationstours.com
+      </a>
+    </div>
+  </div>
+</div>
+      
     </header>
   );
 }
