@@ -180,7 +180,7 @@ export interface Media {
   focalY?: number | null;
 }
 /**
- * Manage countries, cities and travel destinations.
+ * Manage countries, cities, regions and travel destinations.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "destinations".
@@ -189,7 +189,8 @@ export interface Destination {
   id: number;
   name: string;
   slug: string;
-  country: 'south-africa' | 'zimbabwe' | 'botswana';
+  country: 'south-africa' | 'zimbabwe' | 'botswana' | 'eswatini' | 'lesotho';
+  destinationType: 'country' | 'city' | 'region' | 'national-park' | 'other';
   region?: string | null;
   shortDescription: string;
   description?: {
@@ -217,11 +218,13 @@ export interface Destination {
       }[]
     | null;
   featured?: boolean | null;
-  status?: ('draft' | 'published') | null;
+  status: 'draft' | 'published';
   updatedAt: string;
   createdAt: string;
 }
 /**
+ * Manage travel activities and experiences offered across your destinations.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "activities".
  */
@@ -254,7 +257,7 @@ export interface Activity {
    */
   duration?: string | null;
   featured?: boolean | null;
-  status?: ('draft' | 'published') | null;
+  status: 'draft' | 'published';
   updatedAt: string;
   createdAt: string;
 }
@@ -475,6 +478,7 @@ export interface DestinationsSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   country?: T;
+  destinationType?: T;
   region?: T;
   shortDescription?: T;
   description?: T;

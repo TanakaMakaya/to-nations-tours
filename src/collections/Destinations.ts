@@ -6,12 +6,21 @@ export const Destinations: CollectionConfig = {
 
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'country', 'status', 'updatedAt'],
-    description: 'Manage countries, cities and travel destinations.',
+    defaultColumns: ['name', 'country', 'destinationType', 'status'],
+    description: 'Manage countries, cities, regions and travel destinations.',
   },
 
   access: {
-    read: () => true,
+    read: ({ req }) => {
+      if (req.user) return true
+
+      return {
+        status: {
+          equals: 'published',
+        },
+      }
+    },
+
     create: ({ req }) => Boolean(req.user),
     update: ({ req }) => Boolean(req.user),
     delete: ({ req }) => Boolean(req.user),
@@ -23,6 +32,7 @@ export const Destinations: CollectionConfig = {
       type: 'text',
       required: true,
     },
+
     {
       name: 'slug',
       type: 'text',
@@ -30,6 +40,7 @@ export const Destinations: CollectionConfig = {
       unique: true,
       index: true,
     },
+
     {
       name: 'country',
       type: 'select',
@@ -38,33 +49,55 @@ export const Destinations: CollectionConfig = {
         { label: 'South Africa', value: 'south-africa' },
         { label: 'Zimbabwe', value: 'zimbabwe' },
         { label: 'Botswana', value: 'botswana' },
+        { label: 'Eswatini', value: 'eswatini' },
+        { label: 'Lesotho', value: 'lesotho' },
       ],
     },
+
+    {
+      name: 'destinationType',
+      type: 'select',
+      required: true,
+      defaultValue: 'country',
+      options: [
+        { label: 'Country', value: 'country' },
+        { label: 'City', value: 'city' },
+        { label: 'Region', value: 'region' },
+        { label: 'National Park', value: 'national-park' },
+        { label: 'Other', value: 'other' },
+      ],
+    },
+
     {
       name: 'region',
       type: 'text',
     },
+
     {
       name: 'shortDescription',
       type: 'textarea',
       required: true,
     },
+
     {
       name: 'description',
       type: 'richText',
     },
+
     {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',
       required: true,
     },
+
     {
       name: 'gallery',
       type: 'upload',
       relationTo: 'media',
       hasMany: true,
     },
+
     {
       name: 'highlights',
       type: 'array',
@@ -80,14 +113,17 @@ export const Destinations: CollectionConfig = {
         },
       ],
     },
+
     {
       name: 'featured',
       type: 'checkbox',
       defaultValue: false,
     },
+
     {
       name: 'status',
       type: 'select',
+      required: true,
       defaultValue: 'draft',
       options: [
         { label: 'Draft', value: 'draft' },
