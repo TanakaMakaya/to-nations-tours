@@ -7,12 +7,24 @@ export const Activities: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'category', 'status', 'updatedAt'],
+    description: 'Manage travel activities and experiences offered across your destinations.',
   },
 
   access: {
-    read: () => true,
+    read: ({ req }) => {
+      if (req.user) return true
+
+      return {
+        status: {
+          equals: 'published',
+        },
+      }
+    },
+
     create: ({ req }) => Boolean(req.user),
+
     update: ({ req }) => Boolean(req.user),
+
     delete: ({ req }) => Boolean(req.user),
   },
 
@@ -22,6 +34,7 @@ export const Activities: CollectionConfig = {
       type: 'text',
       required: true,
     },
+
     {
       name: 'slug',
       type: 'text',
@@ -29,6 +42,7 @@ export const Activities: CollectionConfig = {
       unique: true,
       index: true,
     },
+
     {
       name: 'category',
       type: 'select',
@@ -42,15 +56,18 @@ export const Activities: CollectionConfig = {
         { label: 'Relaxation', value: 'relaxation' },
       ],
     },
+
     {
       name: 'shortDescription',
       type: 'textarea',
       required: true,
     },
+
     {
       name: 'description',
       type: 'richText',
     },
+
     {
       name: 'destinations',
       type: 'relationship',
@@ -58,18 +75,21 @@ export const Activities: CollectionConfig = {
       hasMany: true,
       required: true,
     },
+
     {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',
       required: true,
     },
+
     {
       name: 'gallery',
       type: 'upload',
       relationTo: 'media',
       hasMany: true,
     },
+
     {
       name: 'duration',
       type: 'text',
@@ -77,15 +97,18 @@ export const Activities: CollectionConfig = {
         description: 'For example: 3 hours or Full day.',
       },
     },
+
     {
       name: 'featured',
       type: 'checkbox',
       defaultValue: false,
     },
+
     {
       name: 'status',
       type: 'select',
       defaultValue: 'draft',
+      required: true,
       options: [
         { label: 'Draft', value: 'draft' },
         { label: 'Published', value: 'published' },

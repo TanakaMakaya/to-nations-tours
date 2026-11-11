@@ -259,6 +259,8 @@ export interface Activity {
   createdAt: string;
 }
 /**
+ * Manage tour packages and travel itineraries.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "packages".
  */
@@ -266,75 +268,72 @@ export interface Package {
   id: number;
   title: string;
   slug: string;
-  shortDescription: string;
-  description?: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
+  /**
+   * Display name from the original journey data, e.g. South Africa or Southern Africa.
+   */
+  destinationLabel: string;
+  /**
+   * Select all countries, cities and regions covered by this tour.
+   */
   destinations: (number | Destination)[];
-  activities?: (number | Activity)[] | null;
+  location?: string | null;
+  duration: string;
+  nights?: string | null;
+  /**
+   * Adult price, e.g. From $2,450 / Adult.
+   */
+  price: string;
+  /**
+   * Child price, e.g. From $1,650 / Child.
+   */
+  childPrice?: string | null;
+  transportation?: string | null;
+  tourType?: string | null;
+  language?: string | null;
+  fitnessLevel?: string | null;
+  groupSize?: string | null;
+  minimumAge?: string | null;
+  maximumAge?: string | null;
   featuredImage: number | Media;
   gallery?: (number | Media)[] | null;
-  /**
-   * For example: 5 days / 4 nights.
-   */
-  duration: string;
-  /**
-   * Starting price in the selected currency.
-   */
-  priceFrom: number;
-  currency?: ('ZAR' | 'USD' | 'BWP') | null;
-  /**
-   * For example: 2–10 travellers.
-   */
-  groupSize?: string | null;
+  overview?: string | null;
+  itineraryIntro?: string | null;
+  highlights?:
+    | {
+        item: string;
+        id?: string | null;
+      }[]
+    | null;
   itinerary?:
     | {
-        day: number;
+        day: string;
         title: string;
-        description?: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
-              [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        } | null;
+        description: string;
         id?: string | null;
       }[]
     | null;
-  inclusions?:
+  includes?:
     | {
         item: string;
         id?: string | null;
       }[]
     | null;
-  exclusions?:
+  excludes?:
     | {
         item: string;
+        id?: string | null;
+      }[]
+    | null;
+  activities?: (number | Activity)[] | null;
+  faqs?:
+    | {
+        question: string;
+        answer: string;
         id?: string | null;
       }[]
     | null;
   featured?: boolean | null;
-  status?: ('draft' | 'published') | null;
+  status: 'draft' | 'published';
   updatedAt: string;
   createdAt: string;
 }
@@ -519,16 +518,30 @@ export interface ActivitiesSelect<T extends boolean = true> {
 export interface PackagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
-  shortDescription?: T;
-  description?: T;
+  destinationLabel?: T;
   destinations?: T;
-  activities?: T;
+  location?: T;
+  duration?: T;
+  nights?: T;
+  price?: T;
+  childPrice?: T;
+  transportation?: T;
+  tourType?: T;
+  language?: T;
+  fitnessLevel?: T;
+  groupSize?: T;
+  minimumAge?: T;
+  maximumAge?: T;
   featuredImage?: T;
   gallery?: T;
-  duration?: T;
-  priceFrom?: T;
-  currency?: T;
-  groupSize?: T;
+  overview?: T;
+  itineraryIntro?: T;
+  highlights?:
+    | T
+    | {
+        item?: T;
+        id?: T;
+      };
   itinerary?:
     | T
     | {
@@ -537,16 +550,24 @@ export interface PackagesSelect<T extends boolean = true> {
         description?: T;
         id?: T;
       };
-  inclusions?:
+  includes?:
     | T
     | {
         item?: T;
         id?: T;
       };
-  exclusions?:
+  excludes?:
     | T
     | {
         item?: T;
+        id?: T;
+      };
+  activities?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
         id?: T;
       };
   featured?: T;

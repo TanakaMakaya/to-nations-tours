@@ -6,17 +6,33 @@ export const Packages: CollectionConfig = {
 
   admin: {
     useAsTitle: 'title',
-    defaultColumns: ['title', 'priceFrom', 'status', 'featured'],
+    defaultColumns: [
+      'title',
+      'destinationLabel',
+      'price',
+      'status',
+      'featured',
+    ],
+    description: 'Manage tour packages and travel itineraries.',
   },
 
   access: {
-    read: () => true,
+    read: ({ req }) => {
+      if (req.user) return true
+
+      return {
+        status: {
+          equals: 'published',
+        },
+      }
+    },
     create: ({ req }) => Boolean(req.user),
     update: ({ req }) => Boolean(req.user),
     delete: ({ req }) => Boolean(req.user),
   },
 
   fields: [
+    // Basic information
     {
       name: 'title',
       type: 'text',
@@ -30,13 +46,13 @@ export const Packages: CollectionConfig = {
       index: true,
     },
     {
-      name: 'shortDescription',
-      type: 'textarea',
+      name: 'destinationLabel',
+      type: 'text',
       required: true,
-    },
-    {
-      name: 'description',
-      type: 'richText',
+      admin: {
+        description:
+          'Display name from the original journey data, e.g. South Africa or Southern Africa.',
+      },
     },
     {
       name: 'destinations',
@@ -44,13 +60,72 @@ export const Packages: CollectionConfig = {
       relationTo: 'destinations',
       hasMany: true,
       required: true,
+      admin: {
+        description: 'Select all countries, cities and regions covered by this tour.',
+      },
     },
     {
-      name: 'activities',
-      type: 'relationship',
-      relationTo: 'activities',
-      hasMany: true,
+      name: 'location',
+      type: 'text',
     },
+
+    // Duration and pricing
+    {
+      name: 'duration',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'nights',
+      type: 'text',
+    },
+    {
+      name: 'price',
+      type: 'text',
+      required: true,
+      admin: {
+        description: 'Adult price, e.g. From $2,450 / Adult.',
+      },
+    },
+    {
+      name: 'childPrice',
+      type: 'text',
+      admin: {
+        description: 'Child price, e.g. From $1,650 / Child.',
+      },
+    },
+
+    // Travel information
+    {
+      name: 'transportation',
+      type: 'text',
+    },
+    {
+      name: 'tourType',
+      type: 'text',
+    },
+    {
+      name: 'language',
+      type: 'text',
+    },
+    {
+      name: 'fitnessLevel',
+      type: 'text',
+    },
+    {
+      name: 'groupSize',
+      type: 'text',
+    },
+    {
+      name: 'minimumAge',
+      type: 'text',
+    },
+    {
+      name: 'maximumAge',
+      type: 'text',
+    },
+
+    // Images
     {
       name: 'featuredImage',
       type: 'upload',
@@ -63,49 +138,37 @@ export const Packages: CollectionConfig = {
       relationTo: 'media',
       hasMany: true,
     },
+
+    // Main content
     {
-      name: 'duration',
-      type: 'text',
-      required: true,
-      admin: {
-        description: 'For example: 5 days / 4 nights.',
-      },
+      name: 'overview',
+      type: 'textarea',
     },
     {
-      name: 'priceFrom',
-      type: 'number',
-      min: 0,
-      required: true,
-      admin: {
-        description: 'Starting price in the selected currency.',
-      },
+      name: 'itineraryIntro',
+      type: 'textarea',
     },
     {
-      name: 'currency',
-      type: 'select',
-      defaultValue: 'ZAR',
-      options: [
-        { label: 'South African Rand (ZAR)', value: 'ZAR' },
-        { label: 'US Dollar (USD)', value: 'USD' },
-        { label: 'Botswana Pula (BWP)', value: 'BWP' },
+      name: 'highlights',
+      type: 'array',
+      fields: [
+        {
+          name: 'item',
+          type: 'text',
+          required: true,
+        },
       ],
     },
-    {
-      name: 'groupSize',
-      type: 'text',
-      admin: {
-        description: 'For example: 2–10 travellers.',
-      },
-    },
+
+    // Daily itinerary
     {
       name: 'itinerary',
       type: 'array',
       fields: [
         {
           name: 'day',
-          type: 'number',
+          type: 'text',
           required: true,
-          min: 1,
         },
         {
           name: 'title',
@@ -114,12 +177,15 @@ export const Packages: CollectionConfig = {
         },
         {
           name: 'description',
-          type: 'richText',
+          type: 'textarea',
+          required: true,
         },
       ],
     },
+
+    // Inclusions and exclusions
     {
-      name: 'inclusions',
+      name: 'includes',
       type: 'array',
       fields: [
         {
@@ -130,7 +196,7 @@ export const Packages: CollectionConfig = {
       ],
     },
     {
-      name: 'exclusions',
+      name: 'excludes',
       type: 'array',
       fields: [
         {
@@ -140,6 +206,34 @@ export const Packages: CollectionConfig = {
         },
       ],
     },
+
+    // Related activities
+    {
+      name: 'activities',
+      type: 'relationship',
+      relationTo: 'activities',
+      hasMany: true,
+    },
+
+    // Frequently asked questions
+    {
+      name: 'faqs',
+      type: 'array',
+      fields: [
+        {
+          name: 'question',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'answer',
+          type: 'textarea',
+          required: true,
+        },
+      ],
+    },
+
+    // Publishing
     {
       name: 'featured',
       type: 'checkbox',
@@ -149,6 +243,7 @@ export const Packages: CollectionConfig = {
       name: 'status',
       type: 'select',
       defaultValue: 'draft',
+      required: true,
       options: [
         { label: 'Draft', value: 'draft' },
         { label: 'Published', value: 'published' },
