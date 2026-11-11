@@ -24,6 +24,13 @@ export const HomePage: GlobalConfig = {
           required: true,
         },
         {
+          name: 'accentText',
+          type: 'text',
+          admin: {
+            description: 'The highlighted italic part of the hero heading.',
+          },
+        },
+        {
           name: 'subtitle',
           type: 'textarea',
         },
@@ -38,6 +45,14 @@ export const HomePage: GlobalConfig = {
         },
         {
           name: 'buttonLink',
+          type: 'text',
+        },
+        {
+          name: 'secondaryButtonText',
+          type: 'text',
+        },
+        {
+          name: 'secondaryButtonLink',
           type: 'text',
         },
       ],

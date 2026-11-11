@@ -223,7 +223,7 @@ export interface Destination {
   createdAt: string;
 }
 /**
- * Manage travel activities and experiences offered across your destinations.
+ * Manage travel activities, experiences, images and destination associations.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "activities".
@@ -233,7 +233,7 @@ export interface Activity {
   name: string;
   slug: string;
   category: 'adventure' | 'wildlife' | 'cultural' | 'sightseeing' | 'outdoor' | 'relaxation';
-  shortDescription: string;
+  shortDescription?: string | null;
   description?: {
     root: {
       type: string;
@@ -249,13 +249,17 @@ export interface Activity {
     };
     [k: string]: unknown;
   } | null;
-  destinations: (number | Destination)[];
+  destinations?: (number | Destination)[] | null;
   featuredImage: number | Media;
   gallery?: (number | Media)[] | null;
   /**
    * For example: 3 hours or Full day.
    */
   duration?: string | null;
+  /**
+   * Controls the activity card size on the existing Activities page.
+   */
+  cardSize: 'large' | 'small' | 'wide';
   featured?: boolean | null;
   status: 'draft' | 'published';
   updatedAt: string;
@@ -510,6 +514,7 @@ export interface ActivitiesSelect<T extends boolean = true> {
   featuredImage?: T;
   gallery?: T;
   duration?: T;
+  cardSize?: T;
   featured?: T;
   status?: T;
   updatedAt?: T;
@@ -628,10 +633,16 @@ export interface HomePage {
   hero: {
     eyebrow?: string | null;
     title: string;
+    /**
+     * The highlighted italic part of the hero heading.
+     */
+    accentText?: string | null;
     subtitle?: string | null;
     backgroundImage?: (number | null) | Media;
     buttonText?: string | null;
     buttonLink?: string | null;
+    secondaryButtonText?: string | null;
+    secondaryButtonLink?: string | null;
   };
   introduction?: {
     heading?: string | null;
@@ -753,10 +764,13 @@ export interface HomePageSelect<T extends boolean = true> {
     | {
         eyebrow?: T;
         title?: T;
+        accentText?: T;
         subtitle?: T;
         backgroundImage?: T;
         buttonText?: T;
         buttonLink?: T;
+        secondaryButtonText?: T;
+        secondaryButtonLink?: T;
       };
   introduction?:
     | T

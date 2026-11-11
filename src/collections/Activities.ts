@@ -6,8 +6,8 @@ export const Activities: CollectionConfig = {
 
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'category', 'status', 'updatedAt'],
-    description: 'Manage travel activities and experiences offered across your destinations.',
+    defaultColumns: ['name', 'category', 'cardSize', 'status'],
+    description: 'Manage travel activities, experiences, images and destination associations.',
   },
 
   access: {
@@ -22,9 +22,7 @@ export const Activities: CollectionConfig = {
     },
 
     create: ({ req }) => Boolean(req.user),
-
     update: ({ req }) => Boolean(req.user),
-
     delete: ({ req }) => Boolean(req.user),
   },
 
@@ -60,7 +58,7 @@ export const Activities: CollectionConfig = {
     {
       name: 'shortDescription',
       type: 'textarea',
-      required: true,
+      required: false,
     },
 
     {
@@ -73,7 +71,7 @@ export const Activities: CollectionConfig = {
       type: 'relationship',
       relationTo: 'destinations',
       hasMany: true,
-      required: true,
+      required: false,
     },
 
     {
@@ -99,6 +97,21 @@ export const Activities: CollectionConfig = {
     },
 
     {
+      name: 'cardSize',
+      type: 'select',
+      required: true,
+      defaultValue: 'small',
+      options: [
+        { label: 'Large', value: 'large' },
+        { label: 'Small', value: 'small' },
+        { label: 'Wide', value: 'wide' },
+      ],
+      admin: {
+        description: 'Controls the activity card size on the existing Activities page.',
+      },
+    },
+
+    {
       name: 'featured',
       type: 'checkbox',
       defaultValue: false,
@@ -107,8 +120,8 @@ export const Activities: CollectionConfig = {
     {
       name: 'status',
       type: 'select',
-      defaultValue: 'draft',
       required: true,
+      defaultValue: 'draft',
       options: [
         { label: 'Draft', value: 'draft' },
         { label: 'Published', value: 'published' },
