@@ -1,12 +1,20 @@
+
 import Hero from "@/components/hero";
 import CuratedJourneys from "@/components/CuratedJourneys";
-import Footer from "@/components/Footer";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import config from "@payload-config";
+import { getPayload } from "payload";
 
-export default function Home() {
+export default async function Home() {
+  const payload = await getPayload({ config });
+
+  const homePage = await payload.findGlobal({
+    slug: "home-page",
+  });
+
   return (
     <>
-      <Hero />
+      <Hero content={homePage.hero} />
       <CuratedJourneys />
       <WhyChooseUs />
     </>
