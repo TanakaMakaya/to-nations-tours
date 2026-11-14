@@ -87,6 +87,20 @@ export const HomePage: GlobalConfig = {
       type: 'relationship',
       relationTo: 'packages',
       hasMany: true,
+    },    
+    {
+      name: 'whyChooseUsSection',
+      type: 'group',
+      fields: [
+        {
+          name: 'heading',
+          type: 'text',
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+        },
+      ],
     },
     {
       name: 'whyChooseUs',

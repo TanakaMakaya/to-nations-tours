@@ -15,6 +15,10 @@ export const AboutPage: GlobalConfig = {
       type: 'group',
       fields: [
         {
+          name: 'eyebrow',
+          type: 'text',
+        },
+        {
           name: 'title',
           type: 'text',
           required: true,
@@ -22,6 +26,10 @@ export const AboutPage: GlobalConfig = {
         {
           name: 'subtitle',
           type: 'textarea',
+        },
+        {
+          name: 'tagline',
+          type: 'text',
         },
         {
           name: 'image',
@@ -40,17 +48,51 @@ export const AboutPage: GlobalConfig = {
         },
         {
           name: 'content',
-          type: 'richText',
+          type: 'textarea',
+          admin: {
+            description: 'Separate paragraphs with a blank line.',
+          },
         },
         {
           name: 'image',
           type: 'upload',
           relationTo: 'media',
         },
+        {
+          name: 'imageCaption',
+          type: 'text',
+        },
+        {
+          name: 'imageHeading',
+          type: 'text',
+        },
+      ],
+    },
+    {
+      name: 'achievements',
+      type: 'array',
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+        },
       ],
     },
     {
       name: 'mission',
+      type: 'textarea',
+    },
+    {
+      name: 'missionHeading',
+      type: 'text',
+    },
+    {
+      name: 'missionQuote',
       type: 'textarea',
     },
     {
@@ -69,6 +111,28 @@ export const AboutPage: GlobalConfig = {
         {
           name: 'description',
           type: 'textarea',
+        },
+      ],
+    },
+    {
+      name: 'callToAction',
+      type: 'group',
+      fields: [
+        {
+          name: 'eyebrow',
+          type: 'text',
+        },
+        {
+          name: 'heading',
+          type: 'text',
+        },
+        {
+          name: 'buttonText',
+          type: 'text',
+        },
+        {
+          name: 'buttonLink',
+          type: 'text',
         },
       ],
     },

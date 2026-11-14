@@ -665,6 +665,10 @@ export interface HomePage {
   };
   featuredDestinations?: (number | Destination)[] | null;
   featuredPackages?: (number | Package)[] | null;
+  whyChooseUsSection?: {
+    heading?: string | null;
+    description?: string | null;
+  };
   whyChooseUs?:
     | {
         title: string;
@@ -688,30 +692,32 @@ export interface HomePage {
 export interface AboutPage {
   id: number;
   hero: {
+    eyebrow?: string | null;
     title: string;
     subtitle?: string | null;
+    tagline?: string | null;
     image?: (number | null) | Media;
   };
   ourStory?: {
     heading?: string | null;
-    content?: {
-      root: {
-        type: string;
-        children: {
-          type: any;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
+    /**
+     * Separate paragraphs with a blank line.
+     */
+    content?: string | null;
     image?: (number | null) | Media;
+    imageCaption?: string | null;
+    imageHeading?: string | null;
   };
+  achievements?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   mission?: string | null;
+  missionHeading?: string | null;
+  missionQuote?: string | null;
   vision?: string | null;
   values?:
     | {
@@ -720,6 +726,12 @@ export interface AboutPage {
         id?: string | null;
       }[]
     | null;
+  callToAction?: {
+    eyebrow?: string | null;
+    heading?: string | null;
+    buttonText?: string | null;
+    buttonLink?: string | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -781,6 +793,12 @@ export interface HomePageSelect<T extends boolean = true> {
       };
   featuredDestinations?: T;
   featuredPackages?: T;
+  whyChooseUsSection?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+      };
   whyChooseUs?:
     | T
     | {
@@ -808,8 +826,10 @@ export interface AboutPageSelect<T extends boolean = true> {
   hero?:
     | T
     | {
+        eyebrow?: T;
         title?: T;
         subtitle?: T;
+        tagline?: T;
         image?: T;
       };
   ourStory?:
@@ -818,8 +838,19 @@ export interface AboutPageSelect<T extends boolean = true> {
         heading?: T;
         content?: T;
         image?: T;
+        imageCaption?: T;
+        imageHeading?: T;
+      };
+  achievements?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
       };
   mission?: T;
+  missionHeading?: T;
+  missionQuote?: T;
   vision?: T;
   values?:
     | T
@@ -827,6 +858,14 @@ export interface AboutPageSelect<T extends boolean = true> {
         title?: T;
         description?: T;
         id?: T;
+      };
+  callToAction?:
+    | T
+    | {
+        eyebrow?: T;
+        heading?: T;
+        buttonText?: T;
+        buttonLink?: T;
       };
   updatedAt?: T;
   createdAt?: T;
