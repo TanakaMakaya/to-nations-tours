@@ -219,6 +219,8 @@ export interface Destination {
     | null;
   featured?: boolean | null;
   status: 'draft' | 'published';
+  subtitle?: string | null;
+  cardSize: 'large' | 'wide' | 'small';
   updatedAt: string;
   createdAt: string;
 }
@@ -497,6 +499,8 @@ export interface DestinationsSelect<T extends boolean = true> {
       };
   featured?: T;
   status?: T;
+  subtitle?: T;
+  cardSize?: T;
   updatedAt?: T;
   createdAt?: T;
 }

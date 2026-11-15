@@ -11,30 +11,40 @@ const destinationData = [
     name: 'South Africa',
     slug: 'south-africa',
     country: 'south-africa',
+    subtitle: 'Cities · Coastlines · Wildlife',
+    cardSize: 'large',
     image: '/images/destinations/south-africa.jpg',
   },
   {
     name: 'Botswana',
     slug: 'botswana',
     country: 'botswana',
+    subtitle: 'Chobe · Okavango · Moremi',
+    cardSize: 'wide',
     image: '/images/destinations/botswana.jpg',
   },
   {
     name: 'Zimbabwe',
     slug: 'zimbabwe',
     country: 'zimbabwe',
+    subtitle: 'Victoria Falls · Hwange · Heritage',
+    cardSize: 'wide',
     image: '/images/destinations/zimbabwe.jpg',
   },
   {
     name: 'Eswatini',
     slug: 'eswatini',
     country: 'eswatini',
+    subtitle: 'Culture · Crafts · Nature',
+    cardSize: 'small',
     image: '/images/destinations/eswatini.jpg',
   },
   {
     name: 'Lesotho',
     slug: 'lesotho',
     country: 'lesotho',
+    subtitle: 'Mountains · Villages · Scenery',
+    cardSize: 'small',
     image: '/images/destinations/lesotho.jpg',
   },
 ] as const
@@ -134,6 +144,8 @@ async function main() {
         name: destination.name,
         slug: destination.slug,
         country: destination.country,
+        subtitle: destination.subtitle,
+        cardSize: destination.cardSize,
         destinationType: 'country' as const,
         shortDescription: 'Destination overview to be completed.',
         featuredImage: imageId,
@@ -153,6 +165,7 @@ async function main() {
         await payload.create({
           collection: 'destinations',
           data,
+          draft: true,
         })
 
         console.log(`Created destination: ${destination.name}`)
@@ -270,6 +283,7 @@ async function main() {
         await payload.create({
           collection: 'packages',
           data,
+          draft: true,
         })
 
         console.log(`Created package: ${journey.title}`)
@@ -282,6 +296,7 @@ async function main() {
     console.log('All imported records are drafts.')
   } finally {
     await payload.destroy()
+    console.log('\nPayload connection closed.')
   }
 }
 

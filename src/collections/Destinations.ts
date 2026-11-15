@@ -130,5 +130,21 @@ export const Destinations: CollectionConfig = {
         { label: 'Published', value: 'published' },
       ],
     },
+
+    {
+      name: "subtitle",
+      type: "text",
+    },
+    {
+      name: "cardSize",
+      type: "select",
+      required: true,
+      defaultValue: "small",
+      options: [
+        { label: "Large", value: "large" },
+        { label: "Wide", value: "wide" },
+        { label: "Small", value: "small" },
+      ],
+    },
   ],
 }
