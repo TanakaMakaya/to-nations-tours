@@ -7,13 +7,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "payload": "payload",
+    "migrate:create": "payload migrate:create",
+    "migrate": "payload migrate"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.92.1",
     "@payloadcms/next": "^3.92.1",
+    "@payloadcms/plugin-cloud-storage": "^3.92.1",
     "@payloadcms/richtext-lexical": "^3.92.1",
+    "@payloadcms/storage-vercel-blob": "^3.92.1",
     "@payloadcms/ui": "^3.92.1",
+    "@vercel/blob": "^2.9.0",
     "@vercel/speed-insights": "^2.0.0",
     "dotenv": "^18.0.9",
     "framer-motion": "^12.42.2",
