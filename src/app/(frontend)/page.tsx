@@ -6,6 +6,8 @@ import config from "@payload-config";
 import { getPayload } from "payload";
 import type { Package, HomePage as HomePageType } from "@/payload-types";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const payload = await getPayload({ config });
 
