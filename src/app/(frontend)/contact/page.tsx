@@ -1,7 +1,39 @@
+
 import { Suspense } from "react";
+import { getPayload } from "payload";
+import config from "@payload-config";
 import BookingForm from "@/components/BookingForm";
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{
+    trip?: string;
+  }>;
+};
+
+export default async function ContactPage({
+  searchParams,
+}: ContactPageProps) {
+  const { trip } = await searchParams;
+
+  let selectedTrip = "";
+
+  if (trip) {
+    const payload = await getPayload({ config });
+
+    const result = await payload.find({
+      collection: "packages",
+      where: {
+        and: [
+          { slug: { equals: trip } },
+          { status: { equals: "published" } },
+        ],
+      },
+      limit: 1,
+    });
+
+    selectedTrip = result.docs[0]?.title ?? "";
+  }
+
   return (
     <main className="min-h-screen bg-[#e4eef7]">
       <section className="px-6 pb-16 pt-36">
@@ -12,7 +44,9 @@ export default function ContactPage() {
 
           <h1 className="mt-6 max-w-4xl font-serif text-5xl leading-tight text-[#071126] md:text-7xl">
             Let&apos;s create something{" "}
-            <span className="italic text-[#2f80b9]">unforgettable.</span>
+            <span className="italic text-[#2f80b9]">
+              unforgettable.
+            </span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
@@ -30,7 +64,7 @@ export default function ContactPage() {
             </div>
           }
         >
-          <BookingForm />
+          <BookingForm selectedTrip={selectedTrip} />
         </Suspense>
 
         <aside className="h-fit rounded-4xl bg-[#071126] p-8 text-white lg:sticky lg:top-28">

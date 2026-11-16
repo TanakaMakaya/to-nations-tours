@@ -1,14 +1,17 @@
+
 "use client";
 
 import { FormEvent, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-export default function BookingForm() {
-  const searchParams = useSearchParams();
-  const selectedTrip = searchParams.get("trip") ?? "";
+type BookingFormProps = {
+  selectedTrip?: string;
+};
 
+export default function BookingForm({
+  selectedTrip = "",
+}: BookingFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -123,6 +126,7 @@ export default function BookingForm() {
           >
             Full name
           </label>
+
           <input
             id="fullName"
             name="fullName"
@@ -140,6 +144,7 @@ export default function BookingForm() {
           >
             Email address
           </label>
+
           <input
             id="email"
             name="email"
@@ -157,6 +162,7 @@ export default function BookingForm() {
           >
             Country
           </label>
+
           <input
             id="country"
             name="country"
@@ -174,6 +180,7 @@ export default function BookingForm() {
           >
             Contact number
           </label>
+
           <input
             id="phone"
             name="phone"
@@ -191,6 +198,7 @@ export default function BookingForm() {
           >
             Preferred travel date
           </label>
+
           <input
             id="travelDate"
             name="travelDate"
@@ -206,6 +214,7 @@ export default function BookingForm() {
           >
             Number of adults
           </label>
+
           <input
             id="adults"
             name="adults"
@@ -224,6 +233,7 @@ export default function BookingForm() {
           >
             Number of children
           </label>
+
           <input
             id="children"
             name="children"
@@ -241,6 +251,7 @@ export default function BookingForm() {
           >
             Enquiry subject
           </label>
+
           <input
             id="subject"
             name="subject"
@@ -258,6 +269,7 @@ export default function BookingForm() {
           >
             Message
           </label>
+
           <textarea
             id="message"
             name="message"
