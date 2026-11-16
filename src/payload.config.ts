@@ -60,7 +60,7 @@ export default buildConfig({
 
   plugins: [
     cloudStoragePlugin({
-      enabled: process.env.NODE_ENV === 'production',
+      enabled: process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'preview',
       alwaysInsertFields: true,
       useCompositePrefixes: true,
       collections: {
