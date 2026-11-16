@@ -3,6 +3,8 @@ import config from "@payload-config";
 import { getPayload } from "payload";
 import DestinationsPageClient from "./DestinationsPageClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function DestinationsPage() {
   const payload = await getPayload({ config });
 

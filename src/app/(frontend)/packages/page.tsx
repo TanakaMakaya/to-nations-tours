@@ -3,6 +3,8 @@ import config from "@payload-config";
 import { getPayload } from "payload";
 import PackagesPageClient from "./PackagesPageClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function PackagesPage() {
   const payload = await getPayload({ config });
 
