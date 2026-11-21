@@ -1,4 +1,3 @@
-
 import 'dotenv/config'
 
 import path from 'path'
@@ -7,7 +6,8 @@ import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -19,7 +19,7 @@ import { HomePage } from './globals/HomePage'
 import { AboutPage } from './globals/AboutPage'
 import { SiteSettings } from './globals/SiteSettings'
 
-import { vercelBlobAdapter } from './storage/vercelBlobAdapter'
+// ❌ 2. We completely removed the import for the old custom adapter
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -58,18 +58,18 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
 
+  // 👇 3. Replace the old cloudStoragePlugin with the official vercelBlobStorage
   plugins: [
-    cloudStoragePlugin({
-      enabled: process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'preview',
-      alwaysInsertFields: true,
-      useCompositePrefixes: true,
+    vercelBlobStorage({
+      enabled: true,
       collections: {
         media: {
-          adapter: vercelBlobAdapter,
           prefix: 'media',
           disablePayloadAccessControl: true,
         },
       },
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+      clientUploads: true, // Bypasses Vercel's 4.5MB upload limit
     }),
   ],
 })
