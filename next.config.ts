@@ -1,5 +1,4 @@
 import type { NextConfig } from 'next'
-
 import { withPayload } from '@payloadcms/next/withPayload'
 
 const nextConfig: NextConfig = {
@@ -7,7 +6,8 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
               protocol: 'https',
-              hostname: 'mwidvpekdftfmpcz.public.blob.vercel-storage.com',
+     
+              hostname: '*.public.blob.vercel-storage.com',
             },
         ],
     },
