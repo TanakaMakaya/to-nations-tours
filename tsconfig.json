@@ -16,10 +16,14 @@
     "plugins": [
       {
         "name": "next"
+      },
+      {
+        "name": "payload"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@payload-config": ["./src/payload.config.ts"]
     }
   },
   "include": [
