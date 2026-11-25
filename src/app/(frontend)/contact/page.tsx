@@ -106,7 +106,7 @@ export default async function ContactPage({
           </div>
 
           <a
-            href="https://wa.me/27814372766?text=Hello%20To%20Nations%20Tours,%20I%20would%20like%20help%20planning%20a%20journey."
+            href="https://wa.me/27651665033?text=Hello%20To%20Nations%20Tours,%20I%20would%20like%20help%20planning%20a%20journey."
             target="_blank"
             rel="noreferrer"
             className="mt-8 block rounded-full border border-white/25 px-6 py-4 text-center font-semibold transition hover:bg-white/10"
