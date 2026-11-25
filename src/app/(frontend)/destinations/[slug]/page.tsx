@@ -117,11 +117,12 @@ export default async function DestinationDetailPage({
 
         <div className="relative z-10 mx-auto flex min-h-[65vh] max-w-7xl flex-col justify-end px-6 pb-16 pt-32 md:px-12">
           <Link
-            href="/destinations"
-            className="mb-8 w-fit text-sm text-white/80 transition hover:text-white"
-          >
-            ← All destinations
-          </Link>
+  href="/destinations"
+  style={{ color: "rgba(255,255,255,0.8)" }}
+  className="mb-8 w-fit text-sm transition hover:opacity-100 opacity-80"
+>
+  ← All destinations
+</Link>
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#A8D8F0]">
             {destination.country.replaceAll("-", " ")}
