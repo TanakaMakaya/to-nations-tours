@@ -183,7 +183,7 @@ export default function DestinationsPageClient({
       </section>
 
       {/* Multi-country journeys */}
-      <section className="bg-white px-6 py-24">
+      {/* <section className="bg-white px-6 py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -70 }}
@@ -229,7 +229,7 @@ export default function DestinationsPageClient({
             />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final call to action */}
       <motion.section
